@@ -1,5 +1,11 @@
 <?php 
 include '../koneksi/koneksi.php'; 
+if (empty(ses('admin_login'))) {
+   alert('Anda belum login!');
+   redirect('login.php');
+   exit();
+}
+
 $brg = new Barang();
 if (isset($_POST['aksi']) && $_POST['aksi']=='tambah') {
    $brg->tambah($_POST['nama'], $_POST['desc'], $_FILES['foto'], $_POST['harga']);
@@ -26,6 +32,11 @@ if (isset($_GET['aksi']) && $_GET['aksi']=='hapus') {
    <div class="container">
       <h1 class="text-center mb-3"> HIP HIP Hore CRUD</h1>
       <div class="row justify-content-center">
+         <div class="col-md-12 mb-3 justify-content-center text-center">
+            <a href="index.php" class="btn btn-success d-print-none">Barang</a>
+            <a href="transaksi.php" class="btn btn-success d-print-none">Transaksi</a>
+            <a href="logout.php" class="btn btn-success d-print-none">Logout</a>
+         </div>
          <div class="col-md-4">
             <form action="" method="post" enctype="multipart/form-data">
             <div class="">

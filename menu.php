@@ -43,15 +43,31 @@ $brg = new Barang();
 					<h2 class="menu_text1">Rp <?php echo rupiah($row->harga) ?></h2>
 					<p class="menu_text2"><?php echo $row->nm_barang ?></p>
 					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
+					<input type="number" name="quantity[<?php echo $row->id ?>]" value="<?php echo cart($row->id) ?>" min="0" max="20" class="qty"> 
 					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
+					<button type="button" brg-id="<?php echo $row->id ?>" class="btn-cart"><img src="in_troly.png" alt="cart" class="in_troly"></button>
 				</div>
 			</div>
 			<?php endforeach ?>
 		</div>
 	</div>			
 
+<style>
+	button.btn-cart {
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+		padding: 0;
+		margin: 10px 0 0;
+		opacity: .8;
+	}
+	button.btn-cart:hover {
+		opacity: 1;
+	}
+	button.btn-cart > img {
+		padding-top: 0;
+	}
+</style>
 
 </div>
 <div id="footer">
@@ -74,6 +90,30 @@ $brg = new Barang();
 			infinite: true,
 			slidesToShow: 3,
 			slidesToScroll: 3
+		});
+
+		$('.btn-cart').click(function(e) {
+			var id = $(this).attr('brg-id');
+			var value = $(this).closest('.text_menu').find('.qty').val();
+			if (value) {
+				if (parseInt(value) >= 0) {
+					$.ajax({
+						url: 'ajax_cart.php',
+						type: 'post',
+						data: {
+							id: id,
+							qty: value
+						},
+					}).done(function(res) {
+						alert('Berhasil Menambahkan ke keranjang')
+					});
+				} else {
+					alert('Jumlah minimal 0')
+				}
+			} else {
+				alert('Jumlah belum diisi')
+			}
+			
 		});
 	});
 </script>	

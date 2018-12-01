@@ -1,5 +1,11 @@
 <?php 
 include '../koneksi/koneksi.php'; 
+if (empty(ses('admin_login'))) {
+   alert('Anda belum login!');
+   redirect('login.php');
+   exit();
+}
+
 $brg = new Barang();
 if (isset($_POST['aksi']) && $_POST['aksi']=='ubah') {
    $brg->ubah($_GET['id'], $_POST['nama'], $_POST['desc'], $_FILES['foto'], $_POST['harga']);
