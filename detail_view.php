@@ -7,7 +7,7 @@
 <body>
 	<div id="sidebar1">
 		<img src="Logo.png" alt="" class="Logo">
-		<h1 class="Judul1"><span class="subjudul1">Our</span> Blog Post</h1>
+		<h1 class="Judul1"><span class="subjudul1">Our</span> Detail</h1>
 		<h3 class="textkosong">asdfghj</h3>
 		<!-- <h1 class="Judul2">Apaan tuh? Masook?</h1> -->
 		<hr class="garis">
@@ -21,30 +21,27 @@
 	<div id="konten_putih">
 		<div class="blok_merah">
 			<div class="navbar">
-				<a href="index.html">Home</a>
-				<a href="menu.html" >Menu</a>
-				<a href="about.html">About</a>
-				<a href="blog.html" class="border1">Blog</a>	
+				<a href="index.php">Home</a>
+				<a href="menu.php" >Menu</a>
+				<a href="about.php">About</a>
+				<a href="blog.php">Blog</a>	
 			</div>
 			<div>
-				<img src="blog.png" alt="" class="image_blog">
-				<p class="blog_text1">Sept 18th, 2018 by Admin</p>
-				<h3 class="blog_text2">Kafein dapat meningkatkan performa fisik secara drastis</h3>
-				<p class="blog_text3">Selain membantu pembakaran lemak, kafein juga meningkatkan
-				level adrenalin di dalam darah.</p>
-				<a href="detail_blog.html" class="blog_text4">Selengkapnya</a>
-			</div>
-			<div>
-				<img src="blog2.png" alt="" class="image_blog">
-				<p class="blog_text1">Sept 19th, 2018 by Admin</p>
-				<h3 class="blog_text2">Kopi dapat mengurangi resiko diabetes tipe 2</h3>
-				<p class="blog_text3">Diabetes tipe 2 adalah masalah kesehatan yang sangat besar.
-				Saat ini ada sekitar 300 juta penderita diabetes di seluruh dunia.</p>
-				<a href="detail_blog2.html" class="blog_text4">Selengkapnya</a>
+				<h2 class="detail_view1">Kopi dapat membantu Anda membakar lemak</h2>
+				<p class="detail_view2">Apakah Anda tahu bahwa hampir semua supplemen
+				pembakar lemak yang dijual secara komersial ternyata mengandung kafein?
+				Alasannya adalah karena kafein merupakan salah satu dari sedikit zat
+				alami yang terbukti membantu pembakaran lemak. Beberapa penelitian
+				menunjukan bahwa kafein dapat meningkatkan proses metabolisme sebesar 3–11%.
+				Penelitian lain menunjukan bahwa kafein dapat meningkatkan pembakaran lemak
+				sebesar 10% pada orang yang menderita obesitas dan 29% pada orang yang tidak obesitas.
+				Akan tetapi, ada kemungkinan bahwa efek ini akan berkurang bagi orang yang sudah
+				meminum kopi dalam kurun waktu yang lama.
+			</p>
 			</div>
 		</div>
 
-		<a href="form_pesan.html" class="button2"><img src="Troli.png" alt=""></a>
+		<a href="form_pesan.php" class="button2"><img src="Troli.png" alt=""></a>
 		<!-- <img src="Coffee.png" alt="" class="coffee"> -->
 		<!-- <img src="image_about.png" alt="" class="image_about"> -->
 	</div>

@@ -19,12 +19,12 @@
 	</div>
 	<div id="konten" class="image_about">
 		<div class="navbar">
-			<a href="index.html">Home</a>
-			<a href="menu.html" >Menu</a>
-			<a href="about.html" class="border1">About</a>
-			<a href="blog.html">Blog</a>	
+			<a href="index.php">Home</a>
+			<a href="menu.php" >Menu</a>
+			<a href="about.php" class="border1">About</a>
+			<a href="blog.php">Blog</a>	
 		</div>
-		<a href="form_pesan.html" class="button2"><img src="Troli.png" alt=""></a>
+		<a href="form_pesan.php" class="button2"><img src="Troli.png" alt=""></a>
 		<!-- <img src="Coffee.png" alt="" class="coffee"> -->
 		<!-- <img src="image_about.png" alt="" class="image_about"> -->
 	</div>

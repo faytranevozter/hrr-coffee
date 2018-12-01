@@ -7,6 +7,13 @@ if (isset($_POST['aksi']) && $_POST['aksi']=='tambah') {
    redirect('index.php');
    exit();
 }
+// hapus data
+if (isset($_GET['aksi']) && $_GET['aksi']=='hapus') {
+   $brg->hapus($_GET['id']);
+   alert('Dihapus!');
+   redirect('index.php');
+   exit();
+}
 ?><!doctype html>
 <html lang="en">
 <head>

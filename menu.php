@@ -36,171 +36,19 @@ $brg = new Barang();
 		<!-- <img src="Coffee.png" alt="" class="coffee"> -->
 		<!-- <img src="image_about.png" alt="" class="image_about"> -->
 		<div class="slider_menu2">
+			<?php foreach ($brg->tampil() as $n => $row): ?>
 			<div class="menu_sect1">
-				<img src="menu_1.png" alt="" class="menu1">
+				<img src="foto/<?php echo $row->foto ?>" alt="<?php echo $row->nm_barang ?>" class="menu1">
 				<div class="text_menu">
-					<h2 class="menu_text1">Rp 20.000</h2>
-					<p class="menu_text2">Nasi Goreng</p>
+					<h2 class="menu_text1">Rp <?php echo rupiah($row->harga) ?></h2>
+					<p class="menu_text2"><?php echo $row->nm_barang ?></p>
 					<p class="menu_text3">Jumlah</p>
 					<input type="number" name="quantity" min="1" max="20" class="qty"> 
 					<br>
 					<img src="in_troly.png" alt="" class="in_troly">
 				</div>
 			</div>
-			<div class="menu_sect2">
-				<img src="menu_2.png" alt="" class="menu2">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 25.000</h2>
-					<p class="menu_text2">Chicken Cordon Bleu</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect3">
-				<img src="menu_3.png" alt="" class="menu3">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 17.000</h2>
-					<p class="menu_text2">Fettuccine Alfredo</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect1">
-				<img src="menu_4.png" alt="" class="menu1">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 12.000</h2>
-					<p class="menu_text2">Kentang Goreng</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect2">
-				<img src="menu_5.png" alt="" class="menu2">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 55.000</h2>
-					<p class="menu_text2">HHR Pizza</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect3">
-				<img src="menu_6.png" alt="" class="menu3">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 20.000</h2>
-					<p class="menu_text2">HHR Burger</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect1">
-				<img src="menu_7.png" alt="" class="menu1">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 15.000</h2>
-					<p class="menu_text2">Roti Bakar</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect2">
-				<img src="menu_8.png" alt="" class="menu2">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 27.000</h2>
-					<p class="menu_text2">Nasi HipHip Hore</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect3">
-				<img src="menu_9.png" alt="" class="menu3">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 23.000</h2>
-					<p class="menu_text2">Bakmi Goreng Hore</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect1">
-				<img src="menu_10.png" alt="" class="menu1">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 20.000</h2>
-					<p class="menu_text2">Americano</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect2">
-				<img src="menu_11.png" alt="" class="menu2">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 22.000</h2>
-					<p class="menu_text2">Cappucino</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect3">
-				<img src="menu_12.png" alt="" class="menu3">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 18.000</h2>
-					<p class="menu_text2">Hot Chocolate</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect1">
-				<img src="menu_13.png" alt="" class="menu1">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 12.000</h2>
-					<p class="menu_text2">Iced Tea</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect2">
-				<img src="menu_14.png" alt="" class="menu2">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 15.000</h2>
-					<p class="menu_text2">Juice</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
-			<div class="menu_sect3">
-				<img src="menu_15.png" alt="" class="menu3">
-				<div class="text_menu">
-					<h2 class="menu_text1">Rp 20.000</h2>
-					<p class="menu_text2">Teler Hore</p>
-					<p class="menu_text3">Jumlah</p>
-					<input type="number" name="quantity" min="1" max="20" class="qty"> 
-					<br>
-					<img src="in_troly.png" alt="" class="in_troly">
-				</div>
-			</div>
+			<?php endforeach ?>
 		</div>
 	</div>			
 
